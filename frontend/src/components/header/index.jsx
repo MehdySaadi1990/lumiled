@@ -1,7 +1,7 @@
 import { ImMenu3 } from "react-icons/im"
 import styled, { keyframes } from "styled-components"
 import { useState } from "react"
-import ImgLogo from '../assets/logo.png'
+import ImgLogo from '../../assets/logo.png'
 import { Link } from "react-router-dom"
 
 const BorderGrow = keyframes`
@@ -17,12 +17,11 @@ const BorderGrow = keyframes`
 `
 const HeaderArea = styled.div`
 width:95%;
-height:120px;
+height:auto;
 display:flex;
 justify-content:center;
 align-items:center;
 flex-wrap:wrap;
-z-index:10000;
 @media all and (min-width:720px){
     height:auto;
     align-items:flex-end;
@@ -94,6 +93,9 @@ text-decoration:none;
     animation-duration:110ms;
     animation-fill-mode:both;
     animation-timing-function:linear;
+    @media all and (min-width:720px){  
+         color:black;
+    }
 }
 `
 
@@ -113,7 +115,7 @@ function Header() {
                 <NavList $openList={openMenu}>
                     <NavSection to='/'>Accueil</NavSection>
                     <NavSection to=''>Catalogue</NavSection>
-                    <NavSection to=''>A propos</NavSection>
+                    <NavSection to='/About  '>A propos</NavSection>
                     <NavSection to=''>Contact</NavSection>
                 </NavList>
             </NavBar>
