@@ -1,0 +1,14 @@
+[
+    {
+        "type":"projecteur",
+        "serie":"serie X",
+        "power":"30/50/100/150/200/400W",
+        "image":""
+    },
+    {
+        "type":"projecteur",
+        "serie":"serie BS",
+        "power":"30/50/100/150W",
+        "image":""
+    }
+]

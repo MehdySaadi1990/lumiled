@@ -4,6 +4,8 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Header from './components/header/index'
 import Footer from './components/footer'
+import Catalogue from './pages/Catalogue'
+import Liper from './pages/Liper'
 
 const GlobalStyle = createGlobalStyle`
 div{
@@ -19,6 +21,8 @@ function App() {
       <Routes >
       <Route path='/' element={<Home/>}/>
       <Route path='/About' element={<About/>}/>
+      <Route path='/Catalogue' element={<Catalogue/>}/>
+      <Route path='/Liper' element={<Liper/>}/>
       </Routes >
       <Footer/>
     </Router>

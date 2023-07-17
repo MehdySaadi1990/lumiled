@@ -114,7 +114,7 @@ function Header() {
             <NavBar>
                 <NavList $openList={openMenu}>
                     <NavSection to='/'>Accueil</NavSection>
-                    <NavSection to=''>Catalogue</NavSection>
+                    <NavSection to='/Catalogue'>Catalogue</NavSection>
                     <NavSection to='/About  '>A propos</NavSection>
                     <NavSection to=''>Contact</NavSection>
                 </NavList>

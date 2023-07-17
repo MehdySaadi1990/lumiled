@@ -41,7 +41,7 @@ function About() {
                 ouvre ses portes sur l'avenue de Calais dans le quartier de NYEKONAKPOE à Lomé.
                 Vous pouvez donc nous retrouver à notre adresse avec le plan suivant.
             </AboutText>
-            <iframe title="map" width="80%" height="400" frameborder="0"  marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Avenue%20de%20Calais+(Lumin'Art)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">area maps</a></iframe>
+            <iframe title="map" width="80%" height="400"  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Avenue%20de%20Calais+(Lumin'Art)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">area maps</a></iframe>
         </AboutArea>
     )
 }
