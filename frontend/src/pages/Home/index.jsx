@@ -62,26 +62,15 @@ color:white;
 cursor:pointer;
 `
 
- function  display() {
-    const array = ["Economie", "Adaptabilité", "Elégance", "Intelligence"]   
-    let timeout =0
-    for(let i =0; i<array.length; i++){
-        setTimeout(()=>document.getElementById(`message ${i}`).textContent= array[i],timeout)
-        timeout+=3000
-    }
-    }
-
-
 function Home(){
-    display()
     return(
         <HomeArea>
         <ImgArea/>         
         <MessageArea>
-        <Message id="message 0" ></Message>
-        <Message id="message 1" ></Message>
-        <Message id="message 2" ></Message>
-        <Message id="message 3" ></Message>
+        <Message id="message 0" >Economie</Message>
+        <Message id="message 1" >Adaptabilité</Message>
+        <Message id="message 2" >Elégance</Message>
+        <Message id="message 3" >Intelligence</Message>
         </MessageArea>
         </HomeArea>
         

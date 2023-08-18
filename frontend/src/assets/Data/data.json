@@ -1,14 +1,20 @@
+
 [
     {
-        "type":"projecteur",
+        "type":"Projecteur",
         "serie":"serie X",
         "power":"30/50/100/150/200/400W",
-        "image":""
+        "image":"images/projecteur_bs_liper.jpg"
     },
     {
-        "type":"projecteur",
+        "type":"Projecteur",
         "serie":"serie BS",
         "power":"30/50/100/150W",
-        "image":""
+        "image":"images/projecteur_x_liper.jpg"
+    },{
+        "type":"Spot",
+        "serie":"serie AG",
+        "power":"30/50/100/150/200/400W",
+        "image":"images/spot_ag_liper.jpg"
     }
 ]
