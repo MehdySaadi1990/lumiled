@@ -1,0 +1,158 @@
+
+[
+    {
+        "type":"Projecteur",
+        "serie":"Serie BS",
+        "power":"30 / 50 / 100 / 150W",
+        "image":"images/Liper/projecteur_bs_liper.jpg",
+        "luminosite":"80 - 90 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Projecteur",
+        "serie":"Serie X",
+        "power":"30 / 50 / 100 / 150 / 200 / 400W",
+        "image":"images/Liper/projecteur_x_liper.jpg",
+        "luminosite":">100 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Projecteur",
+        "serie":" Sensor Serie BS",
+        "power":"10 / 30 / 50W",
+        "image":"images/Liper/projecteur_bs_sensor_liper.jpg",
+        "luminosite":"30 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "sensor":"30 mètres",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Spot",
+        "serie":"Serie AG",
+        "power":"5 / 8 / 12 / 18W",
+        "image":"images/Liper/spot_ag_liper.jpg",
+        "luminosite":"30 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Spot",
+        "serie":"Serie Double AG",
+        "power":"10 / 15W",
+        "image":"images/Liper/spot_double_ag.jpg",
+        "luminosite":"30 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Hublot",
+        "serie":"Serie M",
+        "power":"20W",
+        "image":"images/Liper/hublot_liper.jpg",
+        "luminosite":"30 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Projecteur Solaire",
+        "serie":"Serie H",
+        "power":"20 / 30 / 50 / 100 / 150 / 200W",
+        "image":"images/Liper/projecteur_solaire_liper.jpg",
+        "luminosite":"30 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Projecteur Solaire",
+        "serie":"Serie HF",
+        "power":" 100 / 150 / 200W",
+        "image":"images/Liper/projecteur_solaire_h_liper.jpg",
+        "luminosite":"30 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Cloches",
+        "serie":"Dépôts Usines Serie G",
+        "power":"100 / 150 / 200W",
+        "image":"images/Liper/cloche_usine_liper.jpg",
+        "luminosite":"90 - 100 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Applique",
+        "serie":"Apparent 3 Couleurs",
+        "power":"20 / 30W",
+        "image":"images/Liper/applique_liper.jpg",
+        "luminosite":"90 - 100 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Applique",
+        "serie":"Apparent Serie CR",
+        "power":"20 / 30W",
+        "image":"images/Liper/applique_liper_new.jpg",
+        "luminosite":"90 - 100 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Reglette",
+        "serie":"Série S",
+        "power":"9 / 18 / 36W",
+        "image":"images/Liper/reglette_liper.jpg",
+        "luminosite":"90 - 100 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Reglette",
+        "serie":"Série Eco",
+        "power":"9 / 18 / 36W",
+        "image":"images/Liper/reglette_liper_eco.jpg",
+        "luminosite":"90 - 100 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Reglette",
+        "serie":"Série Etanche",
+        "power":"20 / 40W",
+        "image":"images/Liper/reglette_liper_etanche.jpg",
+        "luminosite":"90 - 100 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    }
+]

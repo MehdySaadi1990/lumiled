@@ -6,6 +6,7 @@ import Header from './components/header/index'
 import Footer from './components/footer'
 import Catalogue from './pages/Catalogue'
 import Liper from './pages/Liper'
+import Line from './pages/Line'
 import TechPage from './pages/TechPage'
 
 const GlobalStyle = createGlobalStyle`
@@ -24,6 +25,7 @@ function App() {
       <Route path='/About' element={<About/>}/>
       <Route path='/Catalogue' element={<Catalogue/>}/>
       <Route path='/Liper' element={<Liper/>}/>
+      <Route path='/Line' element={<Line/>}/>
       <Route path='/TechPage' element={<TechPage/>}/>
       </Routes >
       <Footer/>

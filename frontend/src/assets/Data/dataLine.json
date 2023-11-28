@@ -1,0 +1,36 @@
+
+[
+    {
+        "type":"Ampoule",
+        "serie":"Serie A",
+        "power":"5 / 7 / 9 / 12 / 15W",
+        "image":"images/Line/ampoule_line.png",
+        "luminosite":"80 - 90 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fiche_tech_bulb_line.pdf"
+    },
+    {
+        "type":"Projecteur",
+        "serie":"Serie B",
+        "power":"10 / 20 / 30 / 50 / 90 / 135 / 180 / 270 / 360W",
+        "image":"images/Line/floodlight_line.png",
+        "luminosite":"80 - 90 lumens par Watt",
+        "rayon":"120°",
+        "cri":"> 80",
+        "duree":"30 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Spot",
+        "serie":"Serie D",
+        "power":"3 / 7 / 9/ 12W",
+        "image":"images/Line/spot_serieD_line.png",
+        "luminosite":"80 - 90 lumens par Watt",
+        "rayon":"38°",
+        "cri":"> 80",
+        "duree":"25 000 heures",
+        "fiche_tech":"fiche_tech/fichier.pdf"
+    }
+]

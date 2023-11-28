@@ -7,28 +7,28 @@ import ImgJardin from '../../assets/jardin_lumi.jpg'
 const ImgChange = keyframes`
 0%{
     background:url(${ImgAmp});
-    background-size:cover;
+    background-size:contain;
     background-position:center;
     background-repeat:no-repeat;
     filter:brightness(1);
 }
 33%{
     background:url(${ImgSalon});
-    background-size:cover;
+    background-size:contain;
     background-position:center;
     background-repeat:no-repeat;
     filter:brightness(2);
 }
 66%{
     background:url(${ImgLum});
-    background-size:cover;
+    background-size:contain;
     background-position:center;
     background-repeat:no-repeat;
     filter:brightness(1.2);
 }
 100%{
     background:url(${ImgJardin});
-    background-size:cover;
+    background-size:contain;
     background-position:center;
     background-repeat:no-repeat;
     filter:brightness(1.2);

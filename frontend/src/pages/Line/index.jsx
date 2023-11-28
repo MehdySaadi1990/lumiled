@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import ProductCard from "../../components/ProductCard"
-import Datas from "../../assets/Data/dataLiper.json"
+import Datas from "../../assets/Data/dataLine.json"
 import { useState } from "react"
 
 const LiperArea = styled.div`
@@ -57,7 +57,7 @@ function Liper() {
                 <Type onClick={(e)=>{e.preventDefault()
                 setType("Reglette")}}>Reglettes</Type>
                 <Type onClick={(e)=>{e.preventDefault()
-                setType("Projecteur Solaire")}}>Luminaires Solaires</Type>
+                setType("Ampoule")}}>Ampoule</Type>
             </TypeArea>
             <ProductArea>
             {datas.map((data, index)=>type===data.type&&<ProductCard key={index} type={data.type} serie={data.serie} image={data.image} data={data}/>)}
