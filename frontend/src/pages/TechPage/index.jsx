@@ -69,9 +69,9 @@ function TechPage(image) {
                 <Info>Type : {datas.type}</Info>
                 <Info>Serie : {datas.serie}</Info>
                 <Info>Puissance : {datas.power}</Info>
-                <Info>Luminosité : {datas.luminosite}</Info>
-                <Info>Rayon d'action : {datas.rayon}</Info>
-                <Info>CRI: {datas.cri}</Info>
+                <Info>Couleur Lumière: {datas.light_color}</Info>
+                <Info>Etanchéité : {datas.etancheite}</Info>
+                <Info>Materiau: {datas.couverture}</Info>
                 <Info>Durée de vie: {datas.duree}</Info>
                 {datas.sensor&&<Info>Sensibilité : {datas.sensor}</Info>}
                 <DownloadBtn onClick={(e)=>{e.preventDefault()

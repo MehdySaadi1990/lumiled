@@ -57,7 +57,13 @@ function Liper() {
                 <Type onClick={(e)=>{e.preventDefault()
                 setType("Reglette")}}>Reglettes</Type>
                 <Type onClick={(e)=>{e.preventDefault()
+                setType("Panel")}}>Panel</Type>
+                <Type onClick={(e)=>{e.preventDefault()
                 setType("Projecteur Solaire")}}>Luminaires Solaires</Type>
+                <Type onClick={(e)=>{e.preventDefault()
+                setType("Cloches")}}>Luminaires Industriels</Type>
+                <Type onClick={(e)=>{e.preventDefault()
+                setType("Lampadaire")}}>Eclairage Urbain</Type>
             </TypeArea>
             <ProductArea>
             {datas.map((data, index)=>type===data.type&&<ProductCard key={index} type={data.type} serie={data.serie} image={data.image} data={data}/>)}

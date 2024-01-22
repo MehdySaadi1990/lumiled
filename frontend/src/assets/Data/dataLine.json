@@ -3,34 +3,62 @@
     {
         "type":"Ampoule",
         "serie":"Serie A",
-        "power":"5 / 7 / 9 / 12 / 15W",
+        "certificat":"CE CB RoHS",
+        "power":"5W / 7W / 9W / 12W / 15W",
+        "etancheite":"IP20",
+        "duree":"15 000 heures",
+        "light_color":"2700K / 4000K / 6500K",
+        "couverture":"Plastic + Polycarbonate",
         "image":"images/Line/ampoule_line.png",
-        "luminosite":"80 - 90 lumens par Watt",
-        "rayon":"120°",
-        "cri":"> 80",
-        "duree":"30 000 heures",
-        "fiche_tech":"fiche_tech/fiche_tech_bulb_line.pdf"
+        "fiche_tech":"fiche_tech/Line/fiche_tech_bulb_line.pdf"
     },
     {
         "type":"Projecteur",
         "serie":"Serie B",
-        "power":"10 / 20 / 30 / 50 / 90 / 135 / 180 / 270 / 360W",
+        "certificat":"CE CB RoHS",
+        "power":"10W / 20W / 30W / 50W / 90W / 135W / 180W / 270W / 360W",
+        "etancheite":"IP65",
+        "duree":"50 000 heures",
+        "light_color":"2700K / 4000K / 6500K",
+        "couverture":"Aluminium",
         "image":"images/Line/floodlight_line.png",
-        "luminosite":"80 - 90 lumens par Watt",
-        "rayon":"120°",
-        "cri":"> 80",
-        "duree":"30 000 heures",
-        "fiche_tech":"fiche_tech/fichier.pdf"
+        "fiche_tech":"fiche_tech/Line/fiche_tech_prjB_line.pdf"
     },
     {
         "type":"Spot",
         "serie":"Serie D",
-        "power":"3 / 7 / 9/ 12W",
-        "image":"images/Line/spot_serieD_line.png",
-        "luminosite":"80 - 90 lumens par Watt",
-        "rayon":"38°",
-        "cri":"> 80",
+        "certificat":"CE",
+        "power":"3W / 7W / 9W / 12W",
+        "etancheite":"IP20",
         "duree":"25 000 heures",
+        "light_color":"2700K / 4000K / 6500K",
+        "couverture":"Plastic Coated Aluminium + PMMA",
+        "image":"images/Line/spot_serieD_line.png",
         "fiche_tech":"fiche_tech/fichier.pdf"
+    },
+    {
+        "type":"Spot",
+        "serie":"Serie M",
+        "certificat":"CE CB RoHS",
+        "power":"3W / 5W / 7W / 9W",
+        "etancheite":"IP40",
+        "duree":"25 000 heures",
+        "light_color":"2700K / 4000K / 6500K",
+        "couverture":"Plastic Coated Aluminium + PMMA",
+        "image":"images/Line/spot_serieM_Line.png",
+        "fiche_tech":"fiche_tech/Line/fiche_tech_serieM.pdf"
+    },
+    {
+        "type":"Reglette",
+        "serie":"Serie P",
+        "certificat":"CE",
+        "power":"9W / 18W",
+        "etancheite":"IP20",
+        "duree":"15 000 heures",
+        "light_color":"2700K / 4000K / 6500K",
+        "couverture":"Plastic",
+        "image":"images/Line/LED-T8-Tube-plastic-copy.png",
+        "fiche_tech":"fiche_tech/Line/fiche_tech_tube_plast_line.pdf"
     }
+    
 ]
