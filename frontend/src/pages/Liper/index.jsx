@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import ProductCard from "../../components/ProductCard"
-import Datas from "../../assets/Data/dataLiper.json"
+//import Datas from "../../assets/Data/dataLiper.json"
 import { useState } from "react"
 
 const LiperArea = styled.div`
@@ -43,7 +43,7 @@ align-items:center;
 
 
 function Liper() {
-    const datas = Datas
+    const datas = JSON.parse(localStorage.getItem('datas'))
     const [type, setType] = useState("Projecteur")
     return(
         <LiperArea>

@@ -2,6 +2,7 @@ import styled from "styled-components"
 import ProductCard from "../../components/ProductCard"
 import Datas from "../../assets/Data/dataLine.json"
 import { useState } from "react"
+import { useEffect } from "react"
 
 const LiperArea = styled.div`
 width:100%;
@@ -42,9 +43,10 @@ align-items:center;
 `
 
 
-function Liper() {
-    const datas = Datas
+function Line() {
     const [type, setType] = useState("Projecteur")
+   
+
     return(
         <LiperArea>
             <TypeArea>
@@ -60,10 +62,10 @@ function Liper() {
                 setType("Ampoule")}}>Ampoule</Type>
             </TypeArea>
             <ProductArea>
-            {datas.map((data, index)=>type===data.type&&<ProductCard key={index} type={data.type} serie={data.serie} image={data.image} data={data}/>)}
+
             </ProductArea>
         </LiperArea>
     )
 }
 
-export default Liper
+export default Line

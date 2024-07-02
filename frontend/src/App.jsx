@@ -1,5 +1,7 @@
-import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { IsLogin } from './utils/context'
 import {createGlobalStyle}  from 'styled-components'
+import PrivateRoutes from './components/PrivateRoute/PrivateRoute'
 import Home from './pages/Home'
 import About from './pages/About'
 import Header from './components/header/index'
@@ -18,17 +20,21 @@ div{
 function App() {
   return (
     <Router >
+      <IsLogin>
       <GlobalStyle/>
       <Header/>
       <Routes >
       <Route path='/' element={<Home/>}/>
       <Route path='/About' element={<About/>}/>
+      <Route element={<PrivateRoutes/>}>
+          <Route path='/Liper' element={<Liper/>}/>
+          <Route path='/Line' element={<Line/>}/>
+          <Route path='/TechPage' element={<TechPage/>}/>
+      </Route>
       <Route path='/Catalogue' element={<Catalogue/>}/>
-      <Route path='/Liper' element={<Liper/>}/>
-      <Route path='/Line' element={<Line/>}/>
-      <Route path='/TechPage' element={<TechPage/>}/>
       </Routes >
       <Footer/>
+      </IsLogin>
     </Router>
   );
 }

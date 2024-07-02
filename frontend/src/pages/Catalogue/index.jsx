@@ -17,7 +17,7 @@ margin:20px 0;
     flex-direction:row
 }
 `
-function Catalogue() {
+function Catalogue() {    
     return(
         <CatalogueArea>
             <CatalogueCard link="/Liper" img={ImgLiper} name="LIPER"/>

@@ -9,7 +9,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/projecteur_bs_liper.jpg",
+        "image":"images/Liper/projecteur_bs_liper.png",
         "fiche_tech":"fiche_tech/Liper-BS-series-IP66-floodlight1.pdf"
     },
     {
@@ -21,7 +21,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/projecteur_x_liper.jpg",
+        "image":"images/Liper/projecteur_x_liper.png",
         "fiche_tech":"fiche_tech/Liper-X-series-IP66-floodlight1.pdf"
     },
     {
@@ -34,7 +34,7 @@
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
         "sensor":"30 mètres",
-        "image":"images/Liper/projecteur_bs_sensor_liper.jpg",
+        "image":"images/Liper/projecteur_bs_sensor_liper.png",
         "fiche_tech":"fiche_tech/fichier.pdf"
     },
     {
@@ -46,7 +46,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/projecteur_m_liper.jpg",
+        "image":"images/Liper/projecteur_m_liper.png",
         "fiche_tech":"fiche_tech/Liper-IP66-M-LED-flood-light-Linear.pdf"
     },
     {
@@ -58,7 +58,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K / CCT Ajustable",
         "couverture":"Polycarbonate",
-        "image":"images/Liper/spot_ag_liper.jpg",
+        "image":"images/Liper/spot_ag_liper.png",
         "fiche_tech":"fiche_tech/EWS-Series-Downlight.pdf"
     },
     {
@@ -70,7 +70,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K / CCT Ajustable",
         "couverture":"Polycarbonate",
-        "image":"images/Liper/spot_double_ag.jpg",
+        "image":"images/Liper/spot_double_ag.png",
         "fiche_tech":"fiche_tech/Liper-G-series-side-lit-anti-glare-downlight-10W-15W1.pdf"
     },
     {
@@ -82,7 +82,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K / CCT Ajustable",
         "couverture":"Aluminium + Polycarbonate",
-        "image":"images/Liper/Liper-led-ceiling-light1-2.jpg",
+        "image":"images/Liper/Liper-led-ceiling-light1-2.png",
         "fiche_tech":"fiche_tech/Liper-G-Series-Plastic-Spot-Light.pdf"
     },
     {
@@ -94,7 +94,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/Liper-adjustable-led-downlight.jpg",
+        "image":"images/Liper/Liper-adjustable-led-downlight.png",
         "fiche_tech":"fiche_tech/EC-size-free-downlight.pdf"
     },
     {
@@ -106,7 +106,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K CCT Ajustable",
         "couverture":"Aluminium",
-        "image":"images/Liper/New-Recessed-Adjustable-Downlight.jpg",
+        "image":"images/Liper/New-Recessed-Adjustable-Downlight.png",
         "fiche_tech":"fiche_tech/fichier.pdf"
     },
     {
@@ -118,7 +118,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/Liper-led-ceiling-light.jpg",
+        "image":"images/Liper/Liper-led-ceiling-light.png",
         "fiche_tech":"fiche_tech/fichier.pdf"
     },
     {
@@ -130,7 +130,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/Liper-detachable-led-downlight-1.jpg",
+        "image":"images/Liper/Liper-detachable-led-downlight-1.png",
         "fiche_tech":"fiche_tech/fichier.pdf"
     },
     {
@@ -142,7 +142,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/applique_ag_liper.jpg",
+        "image":"images/Liper/applique_ag_liper.png",
         "fiche_tech":"fiche_tech/EM-Surface-mounted-downlight.pdf"
     },
     {
@@ -154,7 +154,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/applique_liper_new.jpg",
+        "image":"images/Liper/applique_liper_new.png",
         "fiche_tech":"fiche_tech/Liper-IP65-5th-generation-downlight.pdf"
     },
     {
@@ -166,7 +166,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Polycarbonate",
-        "image":"images/Liper/applique_liper.jpg",
+        "image":"images/Liper/applique_liper.png",
         "fiche_tech":"fiche_tech/Liper-IP65-2nd-generation-downlight.pdf"
     },
     {
@@ -178,7 +178,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Polycarbonate",
-        "image":"images/Liper/hublot_liper.jpg",
+        "image":"images/Liper/hublot_liper.png",
         "fiche_tech":"fiche_tech/Liper-IP65-3rd-generation-downlightmatte.pdf"
     },
     {
@@ -190,7 +190,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Polycarbonate",
-        "image":"images/Liper/hublot_oval_liper.jpg",
+        "image":"images/Liper/hublot_oval_liper.png",
         "fiche_tech":"fiche_tech/Liper-IP65-3rd-generation-downlightmatte1.pdf"
     },
     {
@@ -202,7 +202,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium + Polycarbonate",
-        "image":"images/Liper/reglette_liper.jpg",
+        "image":"images/Liper/reglette_liper.png",
         "fiche_tech":"fiche_tech/T8-1st-generation-LED-Tube.pdf"
     },
     {
@@ -214,7 +214,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/reglette_liper_eco.jpg",
+        "image":"images/Liper/reglette_liper_eco.png",
         "fiche_tech":"fiche_tech/T8-2nd-generation-LED-Tube.pdf"
     },
     {
@@ -226,7 +226,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Plastique + Acrylonitrile butadiène styrène + Fer",
-        "image":"images/Liper/reglette_liper_etanche.jpg",
+        "image":"images/Liper/reglette_liper_etanche.png",
         "fiche_tech":"fiche_tech/Liper-IP65-Tri-proof-tube.pdf"
     },
     {
@@ -238,7 +238,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/panel60x60.jpg",
+        "image":"images/Liper/panel60x60.png",
         "fiche_tech":"fiche_tech/E-series-LED-panal-light.pdf"
     },
     {
@@ -250,7 +250,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/A-Ultra-Thin-Panel-Light.jpg",
+        "image":"images/Liper/A-Ultra-Thin-Panel-Light.png",
         "fiche_tech":"fiche_tech/A-series-LED-Ultra-thin-panal-light.pdf"
     },
     {
@@ -262,7 +262,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/cloche_usine_liper.jpg",
+        "image":"images/Liper/cloche_usine_liper.png",
         "fiche_tech":"fiche_tech/Liper-IP65-D-series-LED-High-Bay-light.pdf"
     },
     {
@@ -274,7 +274,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/Slim-IP65-High-Bay-Light1.jpg",
+        "image":"images/Liper/Slim-IP65-High-Bay-Light1.png",
         "fiche_tech":"fiche_tech/Liper-IP65-BS-LED-UFO-light.pdf"
     }
     ,
@@ -287,7 +287,7 @@
         "duree":"30 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/projecteur_solaire_liper.jpg",
+        "image":"images/Liper/projecteur_solaire_liper.png",
         "fiche_tech":"fiche_tech/fichier.pdf"
     },
     {
@@ -299,7 +299,7 @@
         "duree":"30 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/projecteur_solaire_h_liper.jpg",
+        "image":"images/Liper/projecteur_solaire_h_liper.png",
         "fiche_tech":"fiche_tech/fichier.pdf"
     }
     ,
@@ -312,7 +312,7 @@
         "duree":"50 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/Liper-module-led-streetlight-2.jpg",
+        "image":"images/Liper/Liper-module-led-streetlight-2.png",
         "fiche_tech":"fiche_tech/A-Series-LED-Street-light.pdf"
     }
     ,
@@ -325,7 +325,7 @@
         "duree":"30 000 heures",
         "light_color":"2700K / 4000K / 6500K",
         "couverture":"Aluminium",
-        "image":"images/Liper/30-Rainy-Days-Smart-Solar-Street-Light1.jpg",
+        "image":"images/Liper/30-Rainy-Days-Smart-Solar-Street-Light1.png",
         "fiche_tech":"fiche_tech/fichier.pdf"
     }
 ]

@@ -75,7 +75,7 @@ function TechPage(image) {
                 <Info>Durée de vie: {datas.duree}</Info>
                 {datas.sensor&&<Info>Sensibilité : {datas.sensor}</Info>}
                 <DownloadBtn onClick={(e)=>{e.preventDefault()
-                                            downloadPdf(datas.fiche_tech)}}>Télecharger la Fiche Techinique</DownloadBtn>
+                                            downloadPdf(datas.fiche_tech)}}>Télecharger la Fiche Technique</DownloadBtn>
             </InfoArea>
         </PageArea>
     )

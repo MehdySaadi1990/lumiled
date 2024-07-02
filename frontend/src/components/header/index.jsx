@@ -1,8 +1,10 @@
 import { ImMenu3 } from "react-icons/im"
 import styled, { keyframes } from "styled-components"
-import { useState } from "react"
+import { useContext, useState } from "react"
 import ImgLogo from '../../assets/logo.png'
 import { Link } from "react-router-dom"
+import Modal from "../Modal"
+import { ThemeContext } from "../../utils/context"
 
 const BorderGrow = keyframes`
 0%{
@@ -96,6 +98,24 @@ text-decoration:none;
     @media all and (min-width:720px){  
          color:black;
     }
+};
+    @media all and (min-width:720px){  
+    width:15%;
+}
+`
+const ConnexionBtn = styled.button`
+width:100%;
+height:45px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align-center;
+font-weight:bold;
+background-color:#f7d200;
+border:none;
+cursor:pointer;
+@media all and (min-width:720px){  
+    width:20%;
 }
 `
 
@@ -103,6 +123,9 @@ const style = {width:'40px', height:'40px', cursor: 'pointer'}
 
 function Header() {
     const [openMenu, setOpenMenu]=useState(false)
+    const [modal, setModal]= useState(false)
+    const {login, toggleLogin}= useContext(ThemeContext)
+    const user = login
     return(
         <HeaderArea>
             <Logo src={ImgLogo} alt=""/>
@@ -114,11 +137,14 @@ function Header() {
             <NavBar>
                 <NavList $openList={openMenu}>
                     <NavSection to='/'>Accueil</NavSection>
-                    <NavSection to='/Catalogue'>Catalogue</NavSection>
-                    <NavSection to='/About  '>A propos</NavSection>
+                    {user&&<NavSection to='/Catalogue'>Catalogue</NavSection>}
+                    <NavSection to='/About'>A propos</NavSection>
                     <NavSection to=''>Contact</NavSection>
+                    {user?<ConnexionBtn onClick={()=>toggleLogin()}>Déconnexion</ConnexionBtn>:
+                            <ConnexionBtn onClick={()=>setModal(!modal)}>Connection</ConnexionBtn>}
                 </NavList>
             </NavBar>
+            <Modal modal={modal} setModal ={setModal}/>
         </HeaderArea>
     )
 }
