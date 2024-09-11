@@ -1,9 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const auth = require('../middleware/auth')
+const multer = require('../middleware/multer')
 
 const productCtrl = require('../controllers/products')
 
 router.get('/', productCtrl.getItems)
-router.post('/', productCtrl.createItem)
+router.post('/',auth, multer, productCtrl.createItem)
+router.delete('/deleteItem/:id', auth, productCtrl.deleteItem)
+router.get('/pdf/:fiche_tech', auth, productCtrl.getPdf)
+router.delete('/deleteItem', productCtrl.deleteItem)
 
 module.exports = router;

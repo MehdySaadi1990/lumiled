@@ -37,24 +37,12 @@ color:white;
 text-align:center;`
 
 function CatalogueCard({link, img, name}) {
-    const [products, setProducts] = useState([])
     const navigate = useNavigate()
     
-    const fetchProducts = async () => {
-        try {
-            const response = await fetch('http://localhost:5000/api/product');
-            const data = await response.json();
-            setProducts(data);
-            localStorage.setItem('datas', JSON.stringify(data))
-        } catch (error) {
-            console.error('Erreur lors de la récupération des produits:', error);
-        }
-    }
     return(
             <CatalogueDiv>
                 <ImgCatalogue onClick={async (e)=>{
                     e.preventDefault()
-                    await fetchProducts() 
                     navigate('/Liper') 
                 }} src={img} alt=""/>
                 <TextCatalogue>Luminaires domestiques/industriels {name}</TextCatalogue>

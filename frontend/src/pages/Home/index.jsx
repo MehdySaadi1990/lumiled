@@ -36,7 +36,11 @@ const ImgChange = keyframes`
 `
 const HomeArea = styled.div`
 width:100%;
-height:auto;
+min-height:800px;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+align-items:flex-end;
 background-color:#000000;
 border-bottom:1px solid #FFFFFF;
 `

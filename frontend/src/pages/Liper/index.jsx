@@ -2,6 +2,7 @@ import styled from "styled-components"
 import ProductCard from "../../components/ProductCard"
 //import Datas from "../../assets/Data/dataLiper.json"
 import { useState } from "react"
+import { useFetch } from "../../utils/fetchDatas"
 
 const LiperArea = styled.div`
 width:100%;
@@ -43,8 +44,10 @@ align-items:center;
 
 
 function Liper() {
-    const datas = JSON.parse(localStorage.getItem('datas'))
     const [type, setType] = useState("Projecteur")
+    const token = localStorage.getItem('token')
+    const {datas, error}= useFetch('http://localhost:5000/api/product/',token)
+    const products = datas
     return(
         <LiperArea>
             <TypeArea>
@@ -66,7 +69,7 @@ function Liper() {
                 setType("Lampadaire")}}>Eclairage Urbain</Type>
             </TypeArea>
             <ProductArea>
-            {datas.map((data, index)=>type===data.type&&<ProductCard key={index} type={data.type} serie={data.serie} image={data.image} data={data}/>)}
+            {products.map((product, index)=>(type===product.type?<ProductCard key={index} type={product.type} serie={product.serie} image={product.image} data={product}/>:null))}
             </ProductArea>
         </LiperArea>
     )

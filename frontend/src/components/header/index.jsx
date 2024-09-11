@@ -3,8 +3,9 @@ import styled, { keyframes } from "styled-components"
 import { useContext, useState } from "react"
 import ImgLogo from '../../assets/logo.png'
 import { Link } from "react-router-dom"
-import Modal from "../Modal"
-import { ThemeContext } from "../../utils/context"
+import ConnexionModal from "../ConnexionModal"
+import { LoginContext } from "../../utils/context"
+import { AdminContext } from "../../utils/context"
 
 const BorderGrow = keyframes`
 0%{
@@ -18,10 +19,10 @@ const BorderGrow = keyframes`
 }
 `
 const HeaderArea = styled.div`
-width:95%;
+width:100%;
 height:auto;
 display:flex;
-justify-content:center;
+justify-content:space-around;
 align-items:center;
 flex-wrap:wrap;
 @media all and (min-width:720px){
@@ -33,7 +34,6 @@ flex-wrap:wrap;
 const Logo = styled.img`
 width:250px;
 height:120px;
-margin-right:auto;
 @media all and (min-width:720px){
     width:300px;
     height:150px;
@@ -51,15 +51,18 @@ const NavBar = styled.nav`
 width:100%;
 height:auto;
 display:flex;
-justify-content:center;   
+justify-content:center; 
+align-items:center;  
 @media all and (min-width:720px){
-    width:60%;
+    width:100%;
 }
 `
 
 const NavList = styled.ul`
 display:none;
 ${props=>props.$openList===true&&`
+ width:30%;
+padding:0;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -74,7 +77,7 @@ align-items:center;
 @media all and (min-width:720px){  
     width:100%;
     display:flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items:flex-end;
 }
 `
@@ -84,7 +87,7 @@ height:45px;
 display:flex;
 justify-content:center;
 align-items:center;
-text-align-center;
+text-align:center;
 list-style-type:none;
 cursor:pointer;
 font-weight:500;
@@ -115,7 +118,7 @@ background-color:#f7d200;
 border:none;
 cursor:pointer;
 @media all and (min-width:720px){  
-    width:20%;
+    width:15%;
 }
 `
 
@@ -124,8 +127,10 @@ const style = {width:'40px', height:'40px', cursor: 'pointer'}
 function Header() {
     const [openMenu, setOpenMenu]=useState(false)
     const [modal, setModal]= useState(false)
-    const {login, toggleLogin}= useContext(ThemeContext)
-    const user = login
+    const {login, toggleLogin}= useContext(LoginContext)
+    const {admin, toggleAdmin}=useContext(AdminContext)
+
+
     return(
         <HeaderArea>
             <Logo src={ImgLogo} alt=""/>
@@ -137,14 +142,22 @@ function Header() {
             <NavBar>
                 <NavList $openList={openMenu}>
                     <NavSection to='/'>Accueil</NavSection>
-                    {user&&<NavSection to='/Catalogue'>Catalogue</NavSection>}
+                    {admin&&<NavSection to='/Administration'>Administration</NavSection>}
+                    {login&&<NavSection to='/Catalogue'>Catalogue</NavSection>}
                     <NavSection to='/About'>A propos</NavSection>
                     <NavSection to=''>Contact</NavSection>
-                    {user?<ConnexionBtn onClick={()=>toggleLogin()}>Déconnexion</ConnexionBtn>:
+                    {login?<ConnexionBtn onClick={()=>{
+                                            setModal(!modal)
+                                            toggleLogin()
+                                            if(admin===true){
+                                                toggleAdmin()
+                                            }
+                                            localStorage.removeItem('token')
+                    }}>Déconnexion</ConnexionBtn>:
                             <ConnexionBtn onClick={()=>setModal(!modal)}>Connection</ConnexionBtn>}
                 </NavList>
             </NavBar>
-            <Modal modal={modal} setModal ={setModal}/>
+            <ConnexionModal modal={modal} setModal ={setModal}/>
         </HeaderArea>
     )
 }

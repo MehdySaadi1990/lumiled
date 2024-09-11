@@ -3,6 +3,7 @@ const app = express()
 const productRoutes = require('./routes/products')
 const userRoutes = require('./routes/users')
 const mysql = require('mysql2')
+const path = require('path')
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -24,6 +25,6 @@ app.set('db', db);
 app.use(express.json())
 app.use('/api/product', productRoutes)
 app.use('/api/users', userRoutes)
-
-
+app.use('/images', express.static(path.join(__dirname, 'images')))
+app.use('/fiche_tech', express.static(path.join(__dirname, 'fiche_tech')))
 module.exports = app

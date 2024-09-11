@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import ProductCard from "../../components/ProductCard"
-import Datas from "../../assets/Data/dataLine.json"
+//import ProductCard from "../../components/ProductCard"
+//import Datas from "../../assets/Data/dataLine.json"
 import { useState } from "react"
-import { useEffect } from "react"
+//import { useEffect } from "react"
 
 const LiperArea = styled.div`
 width:100%;

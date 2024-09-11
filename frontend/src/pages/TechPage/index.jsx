@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useFetch } from "../../utils/fetchDatas";
 
 const PageArea = styled.div`
 width:100%;
@@ -53,15 +54,14 @@ function getBasket() {
     const basket = localStorage.getItem('basket')
     return basket
 }
-function downloadPdf(data){
-    var pdfUrl=data
-    var link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "fiche-technique-produit";
-    link.click();
+function getToken(){
+    const token = localStorage.getItem('token')
+    return token
 }
 function TechPage(image) {
     const datas = JSON.parse(getBasket()) 
+    const token = getToken()
+    const fileName = datas.fiche_tech.split("/")[4]
     return(
         <PageArea>
             <Img src={datas.image} alt=""/>
@@ -75,7 +75,31 @@ function TechPage(image) {
                 <Info>Durée de vie: {datas.duree}</Info>
                 {datas.sensor&&<Info>Sensibilité : {datas.sensor}</Info>}
                 <DownloadBtn onClick={(e)=>{e.preventDefault()
-                                            downloadPdf(datas.fiche_tech)}}>Télecharger la Fiche Technique</DownloadBtn>
+                                            fetch(`http://localhost:5000/api/product/pdf/${fileName}`,
+                                                {   method:'GET',
+                                                    headers:{
+                                                        'Authorization':`Bearer ${token}`,
+                                                },
+                                                    responseType: 'blob'}
+                                            )
+                                            .then(res => {
+                                                if (!res.ok) {
+                                                    throw new Error('Erreur lors du téléchargement du fichier : ' + res.statusText);
+                                                }
+                                                return res.blob();
+                                            })
+                                            .then(blob => {
+                                                const url = window.URL.createObjectURL(blob);
+                                                console.log("URL du fichier PDF :", url);
+                                            
+                                                const link = document.createElement('a');
+                                                link.href = url;
+                                                link.setAttribute('download', "fiche_technique.pdf");
+                                                document.body.appendChild(link);
+                                                link.click();
+                                                link.remove();
+                                            })
+                                            .catch(err=>console.log(err))}}>Télecharger la Fiche Technique</DownloadBtn>
             </InfoArea>
         </PageArea>
     )
