@@ -69,7 +69,7 @@ function Liper() {
                 setType("Lampadaire")}}>Eclairage Urbain</Type>
             </TypeArea>
             <ProductArea>
-            {products.map((product, index)=>(type===product.type?<ProductCard key={index} type={product.type} serie={product.serie} image={product.image} data={product}/>:null))}
+            {products.map((product, index)=>(product.brand === 'liper' & product.type === type?<ProductCard key={index} type={product.type} serie={product.serie} image={product.image} data={product}/>:null))}
             </ProductArea>
         </LiperArea>
     )

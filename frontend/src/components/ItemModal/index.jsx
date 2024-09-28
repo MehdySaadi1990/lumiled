@@ -79,7 +79,7 @@ bottom:10%;
 left:45%;
 cursor:pointer`
 
-function ItemModal({modal, setModal, ajout, setAjout}) {
+function ItemModal({modal, setModal, ajout, setAjout, id}) {
     const navigate = useNavigate()
     const [marque, setMarque] = useState('') 
     const [ref, setRef] = useState('')
@@ -171,11 +171,23 @@ function ItemModal({modal, setModal, ajout, setAjout}) {
                     )
                     .then(res=>res.json())
                     .catch(err=>console.log(err))
+                    setMarque('')
+                    setRef('')
+                    setType('')
+                    setSerie('')
+                    setPower('')
+                    setEtancheite('')
+                    setDuree('')
+                    setLightColor('')
+                    setCouverture('')
+                    setImage({})
+                    setFicheTech({})
+                    setModal(false)
                 }}>Ajouter Article</ModalBtn>:<ModalBtn onClick={(e)=>{
                     e.preventDefault()  
-                    fetch('http://localhost:5000/api/product/update',
+                    fetch(`http://localhost:5000/api/product/update/:${id}`,
                         {
-                            method: 'POST',
+                            method: 'UPDATE',
                             headers: {
                                 'Authorization' : `Bearer ${token}`,
                             },
@@ -185,6 +197,18 @@ function ItemModal({modal, setModal, ajout, setAjout}) {
                     )
                     .then(res=>res.json())
                     .catch(err=>console.log(err))
+                    setMarque('')
+                    setRef('')
+                    setType('')
+                    setSerie('')
+                    setPower('')
+                    setEtancheite('')
+                    setDuree('')
+                    setLightColor('')
+                    setCouverture('')
+                    setImage({})
+                    setFicheTech({})
+                    setModal(false)
                     
                 }}>Modifier Article</ModalBtn>}
             </Form>

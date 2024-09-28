@@ -48,3 +48,8 @@ exports.deleteItem=(req,res,next)=>{
     .catch(error=>res.status(400).json({error}))
 }
 
+exports.updateItem=(req,res,next)=>{
+    const db = req.app.get('db')
+    db.query(`UPDATE items SET `)
+}
+

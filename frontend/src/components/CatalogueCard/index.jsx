@@ -43,7 +43,7 @@ function CatalogueCard({link, img, name}) {
             <CatalogueDiv>
                 <ImgCatalogue onClick={async (e)=>{
                     e.preventDefault()
-                    navigate('/Liper') 
+                    navigate(`${link}`) 
                 }} src={img} alt=""/>
                 <TextCatalogue>Luminaires domestiques/industriels {name}</TextCatalogue>
             </CatalogueDiv>

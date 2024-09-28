@@ -50,6 +50,7 @@ function ItemManagement() {
     const [modal, setModal]= useState(false)
     const [ajout, setAjout]= useState(false)
     const [brand, setBrand]= useState('liper')
+    const [id, setId] = useState('')
     const token = localStorage.getItem('token')
     const {datas, error} = useFetch(`http://localhost:5000/api/product/`)
     const products = datas
@@ -90,7 +91,10 @@ function ItemManagement() {
                                 .catch((err)=>console.log(err))
                                 navigate('/Administration')
                             }}>Supprimer</Button></Td>
-                            <Td><Button onClick={()=>{setModal(!modal)}} >Modifier</Button></Td>
+                            <Td><Button onClick={()=>{
+                                setModal(!modal)
+                                setId(product.id)
+                                }} >Modifier</Button></Td>
                         </Tr>:null))}
                 </tbody>
             </Table>
@@ -98,7 +102,7 @@ function ItemManagement() {
                 setModal(!modal)
                 setAjout(true)
             }}>Ajouter</AddButton>
-            <ItemModal modal={modal} setModal ={setModal} ajout={ajout} setAjout={setAjout}/>
+            <ItemModal modal={modal} setModal ={setModal} ajout={ajout} setAjout={setAjout} id={id} />
         </Area>
     )
 }

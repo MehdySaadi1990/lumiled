@@ -1,8 +1,9 @@
 import styled from "styled-components"
-//import ProductCard from "../../components/ProductCard"
 //import Datas from "../../assets/Data/dataLine.json"
 import { useState } from "react"
 //import { useEffect } from "react"
+import {useFetch} from "../../utils/fetchDatas"
+import ProductCard from "../../components/ProductCard"
 
 const LiperArea = styled.div`
 width:100%;
@@ -45,7 +46,9 @@ align-items:center;
 
 function Line() {
     const [type, setType] = useState("Projecteur")
-   
+    const token = localStorage.getItem('token')
+    const {datas, error} = useFetch('http://localhost:5000/api/product/', token)
+    const products = datas
 
     return(
         <LiperArea>
@@ -62,7 +65,7 @@ function Line() {
                 setType("Ampoule")}}>Ampoule</Type>
             </TypeArea>
             <ProductArea>
-
+                {products.map((product, index)=>(product.brand === 'line' & product.type === type?<ProductCard key={index} type={product.type} serie={product.serie} image={product.image} data={product}/>:null))}
             </ProductArea>
         </LiperArea>
     )
