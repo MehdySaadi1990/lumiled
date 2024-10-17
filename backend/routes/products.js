@@ -5,11 +5,11 @@ const multer = require('../middleware/multer')
 
 const productCtrl = require('../controllers/products')
 
-router.get('/', productCtrl.getItems)
+router.get('/', auth, productCtrl.getItems)
 router.post('/',auth, multer, productCtrl.createItem)
 router.delete('/deleteItem/:id', auth, productCtrl.deleteItem)
 router.get('/pdf/:fiche_tech', auth, productCtrl.getPdf)
 router.delete('/deleteItem', auth, productCtrl.deleteItem)
-router.put('/update/:id', auth, productCtrl.updateItem)
+router.put('/update/:id', auth, multer, productCtrl.updateItem)
 
 module.exports = router;

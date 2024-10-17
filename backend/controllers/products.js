@@ -30,26 +30,60 @@ exports.createItem=(req,res,next)=>{
         })
     }
    }
-exports.deleteItem=(req,res,next)=>{
+exports.deleteItem = (req,res,next)=>{
     const db = req.app.get('db')
     db.query(`SELECT * FROM items WHERE id = '${req.body.id}'`)
     .then((result)=>{
         if (result[0][0].userId != req.auth.userId) {
             res.status(201).json({message:'action non-autorisée'})
         }else{
-            const fileName = result[0][0].image.split('/images/')[1];
-            fs.unlink(`images/${fileName}`, ()=>{
+            const imageName = result[0][0].image.split('/images/')[1];
+                fs.unlink(`images/${imageName}`, ()=>{
+                const fileName = result[0][0].fiche_tech.split('/fiche_tech/')[1];
+                fs.unlink(`fiche_tech/${fileName}`,()=>{
                 db.query(`DELETE FROM items WHERE id=${req.params.id}`)
                 .then(()=>res.status(200).json({message : 'Produit supprimé'}))
                 .catch(error=>res.status(400).json({error}))
+                })
             })
         }
         })
     .catch(error=>res.status(400).json({error}))
 }
 
-exports.updateItem=(req,res,next)=>{
+exports.updateItem = (req,res,next)=>{
     const db = req.app.get('db')
-    db.query(`UPDATE items SET `)
+    db.query(`SELECT * FROM items WHERE id = ${req.params.id}`)
+    .then((result)=>{
+        if (result[0][0].userId != req.auth.userId) {
+            res.status(201).json({message:'action non-autorisée'})
+        }else{
+            let newImage = result[0][0].image
+            let newFicheTech = result[0][0].fiche_tech
+            if(req.files && req.files['image'][0]){
+            const imageName = result[0][0].image.split('/images/')[1];
+            newImage = `${req.protocol}://${req.get('host')}/images/${req.files['image'][0].filename}`;
+            fs.unlink(`images/${imageName}`, (err)=>{
+                if (err) {
+                    return res.status(500).json({ error: 'Erreur lors de la suppression de l\'ancienne image' });
+                }
+                }
+            )
+           
+            }
+            if(req.files && req.files['fiche_tech']){
+            const fileName = result[0][0].fiche_tech.split('/fiche_tech/')[1];
+            newFicheTech = `${req.protocol}://${req.get('host')}/fiche_tech/${req.files['fiche_tech'][0].filename}`
+            fs.unlink(`fiche_tech/${fileName}`,(err)=>{
+                if (err) {
+                    return res.status(500).json({ error: 'Erreur lors de la suppression de l\'ancienne fiche' });
+                    }
+                })
+            }
+            db.query(`UPDATE items SET image = '${newImage}', fiche_tech = '${newFicheTech}' WHERE id = '${req.params.id}'`)
+            .then(()=>res.status(200).json({message : 'fiche supprimé'}))
+            .catch((error)=>res.status(400).json({error}))
+        }
+    })
+        .catch((error)=>res.status(400).json({error}))
 }
-

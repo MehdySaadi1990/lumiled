@@ -1,5 +1,11 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
 import { useFetch } from "../../utils/fetchDatas";
+
+const FadeIn = keyframes`
+0%{opacity:0}
+100%{opacity:1}
+`
 
 const PageArea = styled.div`
 width:100%;
@@ -9,6 +15,7 @@ display:flex;
 flex-direction:column;
 justify-content:space-around;
 align-items:center;
+animation : ${FadeIn} 500ms ease-in;
 @media all and (min-width:720px){
     flex-direction:row;
     justify-content:center;
@@ -39,12 +46,12 @@ font-weight:500;
 }
 `
 const Info = styled.span`
-width:100%
-height:20px;
+width:100%;
+height:25px;
 `
 const DownloadBtn = styled.button`
-width:100%;
-height:auto;
+width:50%;
+height:50px;
 margin:10px 0;
 cursor:pointer;
 font-weight:bold;
@@ -99,7 +106,7 @@ function TechPage(image) {
                                                 link.click();
                                                 link.remove();
                                             })
-                                            .catch(err=>console.log(err))}}>Télecharger la Fiche Technique</DownloadBtn>
+                                            .catch(err=>console.log(err))}}>Fiche Technique</DownloadBtn>
             </InfoArea>
         </PageArea>
     )

@@ -58,6 +58,10 @@ margin-bottom:5px
 const Input = styled.input`
 width:70%;
 height:30px`
+const Select = styled.select`
+width:71%;
+height:30px
+`
 
 const ModalBtn = styled.button`
 width:30%;
@@ -93,6 +97,8 @@ function ItemModal({modal, setModal, ajout, setAjout, id}) {
     const [image, setImage] = useState({})
     const [ficheTech, setFicheTech] = useState({})
     const token = localStorage.getItem('token')
+    const product = JSON.parse(localStorage.getItem('product'))
+
     const formData = new FormData()
                         formData.append('brand',marque)
                         formData.append('ref',ref)
@@ -107,23 +113,38 @@ function ItemModal({modal, setModal, ajout, setAjout, id}) {
                         formData.append('fiche_tech',ficheTech)
     return(
 <ModalArea $open={modal}>
-            {ajout?<Title>Ajouter un Article</Title>:<Title>Modifier un Article</Title>}
+            <Title>{ajout?'Ajouter un article':'Modifier un article'}</Title>
             <CloseModal onClick={()=>{
                 setModal(false)
                 setAjout(false)
             }}><IoMdClose/></CloseModal>
             <Form>
                 <FormSection>
-                    <Label htmlFor="ref">Marque</Label>
-                    <Input type="text" placeholder="marque" id="marque" name="marque" autoComplete="off" onChange={(e)=>{setMarque(e.target.value)}}/>
+                    <Label htmlFor="marque">Marque</Label>
+                    <Select defaultValue="none" id="marque" onChange={(e)=>{setMarque(e.target.value)}}>
+                        <option value="none">-</option>
+                        <option value="liper">Liper</option>
+                        <option value="line">Line</option>
+                    </Select>
                 </FormSection>
                 <FormSection>
                     <Label htmlFor="ref">Ref</Label>
-                    <Input type="text" placeholder="reference" id="ref" name="ref" autoComplete="off" onChange={(e)=>{setRef(e.target.value)}}/>
+                    <Input type="text" placeholder="reference" id="ref" name="ref" autoComplete="off"  onChange={(e)=>{setRef(e.target.value)}}/>
                 </FormSection>
                 <FormSection>
-                    <Label htmlFor="type">Type</Label>
-                    <Input type="text" placeholder="type" id="type" name="type" autoComplete="off" onChange={(e)=>{setType(e.target.value)}}/>
+                <Label htmlFor="type">Type</Label>
+                <Select defaultValue="none" id="type" onChange={(e)=>{setType(e.target.value)}}>
+                    <option value="none">-</option>
+                    <option value="Projecteur">Projecteur</option>
+                    <option value="Spots">Spots</option>
+                    <option value="Appliques">Appliques Apparentes</option>
+                    <option value="Reglettes">Reglettes</option>
+                    <option value="Panel">Panel</option>
+                    <option value="Projecteur Solaire">Luminaires Solaires</option>
+                    <option value="Cloches">Luminaires Industriels</option>
+                    <option value="Lampadaire">Eclairage Urbain</option>
+                    <option value="Ampoule">Ampoules</option>
+                </Select>
                 </FormSection>
                 <FormSection>
                     <Label htmlFor="serie">Serie</Label>
@@ -185,14 +206,13 @@ function ItemModal({modal, setModal, ajout, setAjout, id}) {
                     setModal(false)
                 }}>Ajouter Article</ModalBtn>:<ModalBtn onClick={(e)=>{
                     e.preventDefault()  
-                    fetch(`http://localhost:5000/api/product/update/:${id}`,
+                    fetch(`http://localhost:5000/api/product/update/${id}`,
                         {
-                            method: 'UPDATE',
+                            method: 'PUT',
                             headers: {
                                 'Authorization' : `Bearer ${token}`,
                             },
                             body: formData,
-
                         }
                     )
                     .then(res=>res.json())

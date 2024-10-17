@@ -52,7 +52,7 @@ function ItemManagement() {
     const [brand, setBrand]= useState('liper')
     const [id, setId] = useState('')
     const token = localStorage.getItem('token')
-    const {datas, error} = useFetch(`http://localhost:5000/api/product/`)
+    const {datas, error} = useFetch(`http://localhost:5000/api/product/`,token)
     const products = datas
     const navigate = useNavigate()
     return(
@@ -92,6 +92,7 @@ function ItemManagement() {
                                 navigate('/Administration')
                             }}>Supprimer</Button></Td>
                             <Td><Button onClick={()=>{
+                                localStorage.setItem('product', JSON.stringify(product))
                                 setModal(!modal)
                                 setId(product.id)
                                 }} >Modifier</Button></Td>
