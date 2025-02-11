@@ -54,9 +54,9 @@ function Liper() {
                 <Type onClick={(e)=>{e.preventDefault()
                 setType("Projecteur")}}>Projecteur</Type>
                 <Type onClick={(e)=>{e.preventDefault()
-                setType("Spot")}}>Spots</Type>
+                setType("Spots")}}>Spots</Type>
                 <Type onClick={(e)=>{e.preventDefault()
-                setType("Applique")}}>Appliques Apparentes</Type>
+                setType("Appliques")}}>Appliques Apparentes</Type>
                 <Type onClick={(e)=>{e.preventDefault()
                 setType("Reglette")}}>Reglettes</Type>
                 <Type onClick={(e)=>{e.preventDefault()

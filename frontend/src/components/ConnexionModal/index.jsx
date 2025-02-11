@@ -128,6 +128,8 @@ function ConnexionModal({modal, setModal}) {
                         }
                         localStorage.setItem('token',token)
                     }
+                    setEmail ('')
+                    setPassword('')
                     setModal(false)
                 })
                 .catch(err=>{console.log(err)})

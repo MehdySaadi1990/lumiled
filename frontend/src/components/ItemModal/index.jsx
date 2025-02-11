@@ -204,6 +204,7 @@ function ItemModal({modal, setModal, ajout, setAjout, id}) {
                     setImage({})
                     setFicheTech({})
                     setModal(false)
+                    navigate('/Administration')
                 }}>Ajouter Article</ModalBtn>:<ModalBtn onClick={(e)=>{
                     e.preventDefault()  
                     fetch(`http://localhost:5000/api/product/update/${id}`,
@@ -229,10 +230,9 @@ function ItemModal({modal, setModal, ajout, setAjout, id}) {
                     setImage({})
                     setFicheTech({})
                     setModal(false)
-                    
+                    navigate('/Administration')
                 }}>Modifier Article</ModalBtn>}
-            </Form>
-            
+            </Form>            
         </ModalArea>
     
     )
