@@ -61,7 +61,7 @@ align-items:center;
 const NavList = styled.ul`
 display:none;
 ${props=>props.$openList===true&&`
- width:30%;
+width:30%;
 padding:0;
 display:flex;
 flex-direction:column;
@@ -70,7 +70,7 @@ align-items:center;
 @media all and (min-width:720px){  
     width:100%;
     flex-direction:row;
-    justify-content:space-between;
+    justify-content:space-aroundO;
     align-items:flex-end;
 }`
 };
@@ -78,7 +78,7 @@ align-items:center;
     width:100%;
     display:flex;
     justify-content:space-around;
-    align-items:flex-end;
+    align-items:center;
 }
 `
 const NavSection = styled(Link)`
