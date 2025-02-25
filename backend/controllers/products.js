@@ -11,7 +11,7 @@ exports.getItems=(req,res,next)=>{
 exports.createItem=(req,res,next)=>{
     const db = req.app.get('db');
     db.query(`INSERT INTO items (ref, type, serie, certificat, power, etancheite, duree, light_color, couverture, image, fiche_tech, userId, brand)
-                VALUES ('${req.body.ref}', '${req.body.type}', 'Série ${req.body.serie}', '${req.body.certificat}', '${req.body.power}', '${req.body.etancheite}', '${req.body.duree}', '${req.body.light_color}', '${req.body.couverture}', '${`${req.protocol}://${req.get('host')}/images/${req.files['image'][0].filename}`}', '${`${req.protocol}://${req.get('host')}/fiche_tech/${req.files['fiche_tech'][0].filename}`}', '${req.auth.userId}','${req.body.brand}')`)
+                VALUES ('${req.body.ref}', '${req.body.type}', 'Série ${req.body.serie}', '${req.body.certificat}', '${req.body.power}', '${req.body.etancheite}', '${req.body.duree}', '${req.body.light_color}', '${req.body.couverture}', '${`${req.protocol}://${req.get('host')}/images/${req.files['image'][0].filename}`}', '${`${req.protocol}://${req.get('host')}/fiche_tech/${req.files['fiche_tech']?req.files['fiche_tech'][0].filename:''}`}', '${req.auth.userId}','${req.body.brand}')`)
    .then((result)=>res.status(200).json(console.log(result)))
    .catch(error=>res.status(400).json({error}))
    }
@@ -94,7 +94,6 @@ exports.updateItem = (req,res,next)=>{
                         })
                     }
             }
-            console.log(fieldsToUpdate);
             if (Object.keys(fieldsToUpdate).length === 0) {
                 return res.status(400).json({ message: 'Aucune donnée fournie pour la mise à jour' });
             }
