@@ -120,11 +120,13 @@ function ItemModal({modal, setModal, ajout, setAjout, id}) {
             }}><IoMdClose/></CloseModal>
             <Form>
                 <FormSection>
-                    <Label htmlFor="marque">Marque</Label>
-                    <Select defaultValue="none" id="marque" onChange={(e)=>{setMarque(e.target.value)}}>
+                    <Label htmlFor="marque">Catégorie</Label>
+                    <Select defaultValue="none" id="categorie" onChange={(e)=>{setMarque(e.target.value)}}>
                         <option value="none">-</option>
-                        <option value="liper">Liper</option>
-                        <option value="line">Line</option>
+                        <option value="exterieur">Extérieur</option>
+                        <option value="interieur">Intérieur</option>
+                        <option value="decoratif">Décoratif</option>
+                        <option value="solaire">Solaire</option>
                     </Select>
                 </FormSection>
                 <FormSection>
@@ -136,14 +138,15 @@ function ItemModal({modal, setModal, ajout, setAjout, id}) {
                 <Select defaultValue="none" id="type" onChange={(e)=>{setType(e.target.value)}}>
                     <option value="none">-</option>
                     <option value="Projecteur">Projecteur</option>
-                    <option value="Spots">Spots</option>
-                    <option value="Appliques">Appliques Apparentes</option>
-                    <option value="Reglettes">Reglettes</option>
-                    <option value="Panel">Panel</option>
-                    <option value="Projecteur Solaire">Luminaires Solaires</option>
-                    <option value="Cloches">Luminaires Industriels</option>
-                    <option value="Lampadaire">Eclairage Urbain</option>
-                    <option value="Ampoule">Ampoules</option>
+                    <option value="Spot">Spots</option>
+                    <option value="Plafonnier">Plafonnier</option>
+                    <option value="Applique murale">Applique Murale</option>
+                    <option value="Reglette">Reglette</option>
+                    <option value="Ruban">Ruban</option>
+                    <option value="Magnetique">Luminaire Magnetique</option>
+                    <option value="Lustre">Lustre</option>
+                    <option value="Lampe de table">Lampe de table</option>
+                    <option value="Lampadaire">Lampadaire</option>
                 </Select>
                 </FormSection>
                 <FormSection>

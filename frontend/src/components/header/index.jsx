@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 import ConnexionModal from "../ConnexionModal"
 import { LoginContext } from "../../utils/context"
 import { AdminContext } from "../../utils/context"
+import { FaShoppingCart } from "react-icons/fa"
 
 const BorderGrow = keyframes`
 0%{
@@ -22,12 +23,13 @@ const HeaderArea = styled.div`
 width:100%;
 height:auto;
 display:flex;
-justify-content:space-around;
+justify-content:space-between;
 align-items:center;
 flex-wrap:wrap;
 @media all and (min-width:720px){
     height:auto;
     align-items:flex-end;
+    flex-wrap:nowrap;
  }
 `
 
@@ -35,13 +37,13 @@ const Logo = styled.img`
 width:250px;
 height:120px;
 @media all and (min-width:720px){
-    width:300px;
-    height:150px;
+    width:250px;
+    height:125px;
  }
 `
+
 const IconMenu=styled.span`
 width:20%;
-text-align:right;
 @media all and (min-width:720px){
    display:none;
 }
@@ -52,9 +54,9 @@ width:100%;
 height:auto;
 display:flex;
 justify-content:center; 
-align-items:center;  
+align-items:center; 
 @media all and (min-width:720px){
-    width:100%;
+    width:60%;
 }
 `
 
@@ -70,7 +72,7 @@ align-items:center;
 @media all and (min-width:720px){  
     width:100%;
     flex-direction:row;
-    justify-content:space-aroundO;
+    justify-content:space-around;
     align-items:flex-end;
 }`
 };
@@ -103,7 +105,7 @@ text-decoration:none;
     }
 };
     @media all and (min-width:720px){  
-    width:15%;
+    width:50%;
 }
 `
 const ConnexionBtn = styled.button`
@@ -117,8 +119,9 @@ font-weight:bold;
 background-color:#f7d200;
 border:none;
 cursor:pointer;
+border-radius:10px;
 @media all and (min-width:720px){  
-    width:15%;
+    width:25%;
 }
 `
 
@@ -138,14 +141,14 @@ function Header() {
                 <ImMenu3 style={style} onClick={(e)=>{
                 setOpenMenu(!openMenu)
                 }}/>
-                </IconMenu>
+            </IconMenu>
             <NavBar>
                 <NavList $openList={openMenu}>
                     <NavSection to='/'>Accueil</NavSection>
                     {admin&&<NavSection to='/Administration'>Administration</NavSection>}
-                    {login&&<NavSection to='/Catalogue'>Catalogue</NavSection>}
+                    {login&&<NavSection to='/Items'>Catalogue</NavSection>}
                     <NavSection to='/About'>A propos</NavSection>
-                    <NavSection to=''>Contact</NavSection>
+                    {login&&<NavSection to='/Cart'><FaShoppingCart size={20}/></NavSection>}
                     {login?<ConnexionBtn onClick={()=>{
                                             setModal(!modal)
                                             toggleLogin()

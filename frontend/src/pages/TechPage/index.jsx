@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { keyframes } from "styled-components";
-import { useFetch } from "../../utils/fetchDatas";
 
 const FadeIn = keyframes`
 0%{opacity:0}
@@ -17,44 +16,84 @@ justify-content:space-around;
 align-items:center;
 animation : ${FadeIn} 500ms ease-in;
 @media all and (min-width:720px){
-    flex-direction:row;
-    justify-content:center;
-}
+    width:100%;
+    height:auto;
+    flex-direction:row
+};
+`
+const ImageArea = styled.div`
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 `
 const Img= styled.img`
 width:200px;
 height:200px;
 object-fit:content;
+transition: transform 1000ms;
 @media all and (min-width:720px){
     width:400px;
     height:400px;
+};
+&:hover{
+transform : scale(1.3)
 }
 `
 const InfoArea= styled.div`
-width:70%;
+width:60%;
 height:auto;
 margin: 20px 0;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-font-weight:500;
+flex-wrap:wrap;
 @media all and (min-width:720px){
-    width:30%;
-    align-items:flex-start;
-    font-size:17px;
+  width:100%;
+  flex-direction:row;  
 }
 `
 const Info = styled.span`
 width:100%;
-height:25px;
+height:150px;
+margin: 10px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+border-radius:10px;
+font-size:17px;
+font-weight:700;
+background-color:rgba(245, 237, 237, 1);
+color:rgba(0, 20, 0, 1);
+text-align:center;
+@media all and (min-width:720px){
+  width:30%;  
+}
 `
-const DownloadBtn = styled.button`
-width:50%;
+const Icon = styled.span`
+font-size:40px;
+margin-bottom:10px`
+const BtnArea = styled.div`
+width:100%;
+height:150px;
+margin:10px;
+display:flex;
+flex-direction:column;
+justify-content:space-around;
+@media all and (min-width:720px){
+  width:30%;  
+}
+`
+const Btn = styled.button`
+width:100%;
 height:50px;
-margin:10px 0;
 cursor:pointer;
 font-weight:bold;
+background-color:#f7d200;
+border-radius:10px;
+border: none
 `
 
 function getBasket() {
@@ -71,17 +110,34 @@ function TechPage(image) {
     const fileName = datas.fiche_tech.split("/")[4]
     return(
         <PageArea>
+            <ImageArea>
+            <h1>{datas.type} {datas.serie}</h1>
             <Img src={datas.image} alt=""/>
+            </ImageArea>
             <InfoArea>
-                <Info>Type : {datas.type}</Info>
-                <Info>Serie : {datas.serie}</Info>
-                <Info>Puissance : {datas.power}</Info>
-                <Info>Couleur Lumière: {datas.light_color}</Info>
-                <Info>Etanchéité : {datas.etancheite}</Info>
-                <Info>Materiau: {datas.couverture}</Info>
-                <Info>Durée de vie: {datas.duree}</Info>
+                <Info>
+                    <Icon>⚡</Icon>
+                    Puissance <br />
+                    {datas.power}</Info>
+                <Info>
+                    <Icon>💡</Icon>
+                    Couleur Lumière <br />
+                    {datas.light_color}</Info>
+                <Info>
+                    <Icon>🛡️</Icon>
+                    Etanchéité <br /> 
+                    {datas.etancheite}</Info>
+                <Info>
+                    <Icon>🔨</Icon>
+                    Materiau <br />
+                    {datas.couverture}</Info>
+                <Info>
+                    <Icon>🕒</Icon>
+                    Durée de vie <br />
+                    {datas.duree}</Info>
                 {datas.sensor&&<Info>Sensibilité : {datas.sensor}</Info>}
-                <DownloadBtn onClick={(e)=>{e.preventDefault()
+                <BtnArea>
+                <Btn onClick={(e)=>{e.preventDefault()
                                             fetch(`http://localhost:5000/api/product/pdf/${fileName}`,
                                                 {   method:'GET',
                                                     headers:{
@@ -106,8 +162,11 @@ function TechPage(image) {
                                                 link.click();
                                                 link.remove();
                                             })
-                                            .catch(err=>console.log(err))}}>Fiche Technique</DownloadBtn>
-            </InfoArea>
+                                            .catch(err=>console.log(err))}}>Télécharger Fiche Technique</Btn>
+                <Btn>Ajouter au panier</Btn>
+                </BtnArea>
+                                            </InfoArea>
+            
         </PageArea>
     )
 }

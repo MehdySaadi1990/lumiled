@@ -1,29 +1,56 @@
 import styled from "styled-components"
+import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const FooterArea = styled.div`
 width:100%;
 height:auto;
-padding:25px 0;
+padding:50px 0;
+color:#FFFFFF;
 background-color:#000000;
 display:flex;
+flex-direction:column;
 justify-content:center;
+align-items:center
 `
-const FooterText= styled.p`
-width:80%;
+const FooterText= styled.div`
+width:100%;
 height:auto;
-color:#FFFFFF;
+display:flex;
+justify-content:space-around;
 font-size:15px;
-text-align:left;
+text-align:center;
+line-height:30px;
+`
+const Link = styled.a`
+color:#FFFFFF;
+text-decoration:none;
+cursor:pointer
 `
 
 function Footer() {
     return(
     <FooterArea>
-        <FooterText>Adresse : Avenue de Calais - NYEKONAKPOE <br />
-                    E-mail : mehdy.saadi.dk@gmail.com <br />
-                    Tel : 00228 96 36 56 26 - 99 32 37 92 <br />
-                    Facebook : Lumiled Togo <br />
-                    Instagram  : Lumiled Togo</FooterText>
+        <h3>💡 Lumin'Art, votre spécialiste en éclairage</h3>
+        <FooterText>
+            <div>
+            <h4>Produits</h4>
+                <span>Lumières Exterieures</span><br />
+                <span>Lumières Interieures</span><br />
+                <span>Lumières Décoratives</span>
+            </div>
+            <div>
+            <h4>Services</h4>
+                <span>Conseils</span><br />
+                <span>Installation</span><br />
+                <span>Livraison</span>
+            </div>
+            <div>
+               <h4>Suivez-nous</h4>
+                <Link href="www.facebook.com"><FaFacebookF /> Facebook</Link><br />
+                <Link href="www.instagram.com"><FaInstagram /> Instagram</Link><br />
+                <Link href="www.tiktok.com"><FaTiktok/> Tiktok</Link> 
+            </div>
+        </FooterText>
     </FooterArea>
         
         

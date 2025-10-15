@@ -42,12 +42,12 @@ function saveBasket(data) {
     return basket   
  }
 
-function ProductCard({type, serie, image, data}) {
+function ProductCard({type, serie, image, data, power, cct}) {
     return(
         <ProductCardArea to="/TechPage" onClick={()=>
             saveBasket(data)}>
             <ImgProduct src={image} alt=""/>
-            <DescriptionArea>{type} {serie}</DescriptionArea>
+            <DescriptionArea>{type} {serie} {power} {cct}</DescriptionArea>
         </ProductCardArea>
     )
 }

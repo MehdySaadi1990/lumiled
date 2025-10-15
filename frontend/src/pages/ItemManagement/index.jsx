@@ -49,7 +49,7 @@ cursor:pointer
 function ItemManagement() {
     const [modal, setModal]= useState(false)
     const [ajout, setAjout]= useState(false)
-    const [brand, setBrand]= useState('liper')
+    const [brand, setBrand]= useState('exterieur')
     const [id, setId] = useState('')
     const token = localStorage.getItem('token')
     const {datas, error} = useFetch(`http://localhost:5000/api/product/`,token)
@@ -58,14 +58,16 @@ function ItemManagement() {
     return(
         <Area>
             <Title>Gestion des articles</Title>
-            <Brand defaultValue="liper" onChange={(e)=>{setBrand(e.target.value)}}>
-            <option value="liper">Liper</option>
-            <option value="line">Line</option>
+            <Brand defaultValue="exterieur" onChange={(e)=>{setBrand(e.target.value)}}>
+            <option value="exterieur">Extérieur</option>
+            <option value="interieur">Intérieur</option>
+            <option value="decoratif">Décoratif</option>
+            <option value="solaire">Solaire</option>
             </Brand>
             <Table>
                 <thead>
                     <Tr>
-                        <th scope="col">ID</th>
+                        <th scope="col">Ref</th>
                         <th scope="col">Produit</th>
                         <th scope="col">Supprimer</th>
                         <th scope="col">Modifier</th>
@@ -74,7 +76,7 @@ function ItemManagement() {
                 <tbody>
                         {products.map((product, index)=>(product.brand === brand?
                         <Tr key={index}>
-                            <th scope="row">{product.id}</th>
+                            <th scope="row">{product.ref}</th>
                             <Td>{product.type + " " + product.serie}</Td>
                             <Td><Button onClick={async ()=>{
                                await  fetch(`http://localhost:5000/api/product/deleteItem/${product.id}`,

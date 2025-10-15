@@ -5,11 +5,10 @@ import {createGlobalStyle}  from 'styled-components'
 import PrivateRoutes from './components/PrivateRoute/PrivateRoute'
 import Home from './pages/Home'
 import About from './pages/About'
+import Cart from './pages/Cart'
 import Header from './components/header/index'
 import Footer from './components/footer'
-import Catalogue from './pages/Catalogue'
-import Liper from './pages/Liper'
-import Line from './pages/Line'
+import Items from './pages/Items'
 import TechPage from './pages/TechPage'
 import SignIn from './pages/SignIn'
 import AdminRoutes from './components/AdminRoutes'
@@ -34,16 +33,15 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='/About' element={<About/>}/>
       <Route element={<PrivateRoutes/>}>
-          <Route path='/Liper' element={<Liper/>}/>
-          <Route path='/Line' element={<Line/>}/>
+          <Route path='/Items' element={<Items/>}/>
           <Route path='/TechPage' element={<TechPage/>}/>
+          <Route path='/cart' element={<Cart/>}/>
       </Route>
       <Route element={<AdminRoutes/>}>
           <Route path='/Administration' element={<Administration/>}/>
           <Route path='/UserManagement' element={<UserManagement/>}/>
           <Route path='/ItemManagement' element={<ItemManagement/>}/>
       </Route>
-      <Route path='/Catalogue' element={<Catalogue/>}/>
       <Route path='/SignIn' element={<SignIn/>}/>
       </Routes>
       <Footer/>

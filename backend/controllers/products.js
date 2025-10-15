@@ -42,7 +42,7 @@ exports.deleteItem = (req,res,next)=>{
                 const fileName = result[0][0].fiche_tech.split('/fiche_tech/')[1];
                 fs.unlink(`fiche_tech/${fileName}`,()=>{
                 db.query(`DELETE FROM items WHERE id=${req.params.id}`)
-                .then(()=>res.status(200).json({message : 'Produit supprimé'}))
+                .then(()=>{res.status(200).json({message : 'Produit supprimé'})})
                 .catch(error=>res.status(400).json({error}))
                 })
             })

@@ -19,7 +19,8 @@ font-weight:bold;
 text-decoration:none;
 color:black;
 cursor: pointer;
-text-align:center
+text-align:center;
+border-radius:10px;
 `
 
 function Administration() {

@@ -9,18 +9,21 @@ import { useNavigate } from "react-router-dom";
 const ModalArea = styled.div`
 display:none;
 ${props=>props.$open&&`
-width:50%;
+width:70%;
 height:450px;
 padding : 10px 0 40px 0;
 background-color:white;
 border:1px solid black;
 position:absolute;
+left:15%;
 bottom:10%;
 z-index:100000;
 display: flex;
 flex-direction:column;
 justify-content:space-around;
-align-items:center `
+align-items:center;
+border-radius:15px;
+ `
     }
 `
 
@@ -39,7 +42,7 @@ align-items:center
 const FormSection = styled.span`
 width:100%;
 display:flex;
-justify-content:space-around;
+justify-content:center;
 align-items:center;
 @media all and (max-width:768px){
 flex-direction:column;
@@ -47,8 +50,8 @@ flex-direction:column;
 `
 
 const Label = styled.label`
-width:20%;
-font-weight:25px;
+width:15%;
+font-weight:700;
 @media all and (max-width:768px){
 width:100%;
 text-align:center;
@@ -57,7 +60,11 @@ margin-bottom:5px
 `
 const Input = styled.input`
 width:70%;
-height:30px`
+height:30px;
+border-radius:5px;
+@media all and (min-width:720px){  
+    width:40%;
+}`
 
 const ModalBtn = styled.button`
 width:30%;
@@ -68,14 +75,15 @@ display:flex;
 justify-content:center;
 align-items:center;
 border:none;
+border-radius:10px;
 cursor:pointer
 `
 const CloseModal = styled.span`
 width:30px;
 height:30px;
 position:relative;
-bottom:15%;
-left:45%;
+bottom:20%;
+left:48%;
 cursor:pointer`
 
 function ConnexionModal({modal, setModal}) {
