@@ -96,16 +96,40 @@ border-radius:10px;
 border: none
 `
 
-function getBasket() {
-    const basket = localStorage.getItem('basket')
+function getProduct() {
+    const basket = localStorage.getItem('product')
     return basket
 }
 function getToken(){
     const token = localStorage.getItem('token')
     return token
 }
+function getBasket() {
+    const basket = localStorage.getItem('basket')
+    if(basket == null){
+        return []
+    }else{
+        return JSON.parse(basket)
+    }
+}
+const saveBasket = (basket) =>{
+    localStorage.setItem("basket",JSON.stringify(basket))
+}
+async function addItem(item) {
+    const basket = await getBasket()
+    let findProduct = await basket.find(p => p.id === item.id)
+   if(findProduct !== undefined){
+    findProduct.quantity += 1
+   }else{
+    item.quantity = 1
+    basket.push(item)
+   }
+   saveBasket(basket)
+} 
+    
+
 function TechPage(image) {
-    const datas = JSON.parse(getBasket()) 
+    const datas = JSON.parse(getProduct()) 
     const token = getToken()
     const fileName = datas.fiche_tech.split("/")[4]
     return(
@@ -163,7 +187,7 @@ function TechPage(image) {
                                                 link.remove();
                                             })
                                             .catch(err=>console.log(err))}}>Télécharger Fiche Technique</Btn>
-                <Btn>Ajouter au panier</Btn>
+                <Btn onClick={()=>{addItem(datas)}}>Ajouter au panier</Btn>
                 </BtnArea>
                                             </InfoArea>
             

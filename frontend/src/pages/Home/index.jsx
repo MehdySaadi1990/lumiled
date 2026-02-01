@@ -1,10 +1,13 @@
 import styled from "styled-components"
-import { useState } from "react"
+import { useContext, useState } from "react"
 import ConnexionModal from "../../components/ConnexionModal"
 import image1 from "../../assets/ambiance.jpg"
 import image2 from "../../assets/jardin_lumi.jpg"
 import image3 from "../../assets/ampoule.jpg"
 import image4 from "../../assets/lumiere.jpg"
+import { LoginContext } from "../../utils/context"
+
+
 const HomeArea = styled.div`
 width:100%;
 height:auto;
@@ -116,6 +119,7 @@ font-size:3rem`
 
 function Home(){
     const[modal, setModal]=useState(false)
+    const {login, toggleLogin} = useContext(LoginContext)
     return(
         <HomeArea>
         <FirstSectionArea>
@@ -123,7 +127,7 @@ function Home(){
             <Title>Illuminez vos espaces</Title>
             <p>Découvrez notre collection exclusive de luminaires design</p>
             <ButtonProduct onClick={()=>{
-                setModal(!modal)
+            login?setModal(false):setModal(!modal)
             }}>Voir nos produits</ButtonProduct>
         </div>
         </FirstSectionArea>

@@ -94,6 +94,7 @@ function ItemModal({modal, setModal, ajout, setAjout, id}) {
     const [duree, setDuree] = useState('')
     const [lightColor, setLightColor] = useState('')
     const [couverture, setCouverture] = useState('')
+    const [price, setPrice] = useState('')
     const [image, setImage] = useState({})
     const [ficheTech, setFicheTech] = useState({})
     const token = localStorage.getItem('token')
@@ -109,6 +110,7 @@ function ItemModal({modal, setModal, ajout, setAjout, id}) {
                         formData.append('duree',duree)
                         formData.append('light_color',lightColor)
                         formData.append('couverture',couverture)
+                        formData.append('price',price)
                         formData.append('image',image)
                         formData.append('fiche_tech',ficheTech)
     return(
@@ -174,6 +176,10 @@ function ItemModal({modal, setModal, ajout, setAjout, id}) {
                     <Input type="text" placeholder="couverture" id="couverture" name="couverture" autoComplete="off" onChange={(e)=>{setCouverture(e.target.value)}}/>
                 </FormSection>
                 <FormSection>
+                    <Label htmlFor="price">Prix</Label>
+                    <Input type="text" placeholder="prix" id="price" name="price" autoComplete="off" onChange={(e)=>{setPrice(e.target.value)}}/>
+                </FormSection>
+                <FormSection>
                     <Label htmlFor="image">Image</Label>
                     <Input type="file"  id="image" name="image" accept="image/*" onChange={(e)=>{setImage(e.target.files[0])}}/>
                 </FormSection>
@@ -204,6 +210,7 @@ function ItemModal({modal, setModal, ajout, setAjout, id}) {
                     setDuree('')
                     setLightColor('')
                     setCouverture('')
+                    setPrice('')
                     setImage({})
                     setFicheTech({})
                     setModal(false)
