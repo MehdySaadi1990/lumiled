@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/lumiled/static/css/main.414c6053.css",
+    "main.js": "/lumiled/static/js/main.1328a0c9.js",
+    "static/media/lumiere.jpg": "/lumiled/static/media/lumiere.ed6479f4f4993c73c7ac.jpg",
+    "static/media/ambiance.jpg": "/lumiled/static/media/ambiance.e6402d0fde12243dc49a.jpg",
+    "static/media/boutique.jpg": "/lumiled/static/media/boutique.0a727cb8bc9d91b19a44.jpg",
+    "static/media/jardin_lumi.jpg": "/lumiled/static/media/jardin_lumi.101d18adf4d04bab400c.jpg",
+    "static/media/clement.jpeg": "/lumiled/static/media/clement.660a3aee6384f915bab6.jpeg",
+    "static/media/stephan.jpeg": "/lumiled/static/media/stephan.2f1e62a357ead1d60225.jpeg",
+    "static/media/delanov.jpeg": "/lumiled/static/media/delanov.fed0e9ccbe7b1864c8c8.jpeg",
+    "static/media/ampoule.jpg": "/lumiled/static/media/ampoule.abd24c8946fe6332f19e.jpg",
+    "static/media/aguy.jpeg": "/lumiled/static/media/aguy.17bc7caa00ebe95ad931.jpeg",
+    "static/media/logo.png": "/lumiled/static/media/logo.e546b49c9cd9f6514bbb.png",
+    "static/media/mehdy.jpeg": "/lumiled/static/media/mehdy.05928d84f214a7e0f456.jpeg",
+    "index.html": "/lumiled/index.html",
+    "main.414c6053.css.map": "/lumiled/static/css/main.414c6053.css.map",
+    "main.1328a0c9.js.map": "/lumiled/static/js/main.1328a0c9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.414c6053.css",
+    "static/js/main.1328a0c9.js"
+  ]
+}
