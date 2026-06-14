@@ -144,11 +144,11 @@ function Header() {
             </IconMenu>
             <NavBar>
                 <NavList $openList={openMenu}>
-                    <NavSection to='/'>Accueil</NavSection>
-                    {admin&&<NavSection to='/Administration'>Administration</NavSection>}
-                    {login&&<NavSection to='/Items'>Catalogue</NavSection>}
-                    <NavSection to='/About'>A propos</NavSection>
-                    {login&&<NavSection to='/Cart'><FaShoppingCart size={20}/></NavSection>}
+                    <NavSection to='/lumiled/'>Accueil</NavSection>
+                    {admin&&<NavSection to='/lumiled/Administration'>Administration</NavSection>}
+                    {login&&<NavSection to='/lumiled/Items'>Catalogue</NavSection>}
+                    <NavSection to='/lumiled/About'>A propos</NavSection>
+                    {login&&<NavSection to='/lumiled/Cart'><FaShoppingCart size={20}/></NavSection>}
                     {login?<ConnexionBtn onClick={()=>{
                                             setModal(!modal)
                                             toggleLogin()

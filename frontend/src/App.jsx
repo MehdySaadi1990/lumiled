@@ -31,18 +31,18 @@ function App() {
       <Header/>
       <Routes>
       <Route path='/lumiled/' element={<Home/>}/>
-      <Route path='/About' element={<About/>}/>
+      <Route path='/lumiled/About' element={<About/>}/>
       <Route element={<PrivateRoutes/>}>
-          <Route path='/Items' element={<Items/>}/>
-          <Route path='/TechPage' element={<TechPage/>}/>
-          <Route path='/cart' element={<Cart/>}/>
+          <Route path='/lumiled/Items' element={<Items/>}/>
+          <Route path='/lumiled/TechPage' element={<TechPage/>}/>
+          <Route path='/lumiled/cart' element={<Cart/>}/>
       </Route>
       <Route element={<AdminRoutes/>}>
-          <Route path='/Administration' element={<Administration/>}/>
-          <Route path='/UserManagement' element={<UserManagement/>}/>
-          <Route path='/ItemManagement' element={<ItemManagement/>}/>
+          <Route path='/lumiled/Administration' element={<Administration/>}/>
+          <Route path='/lumiled/UserManagement' element={<UserManagement/>}/>
+          <Route path='/lumiled/ItemManagement' element={<ItemManagement/>}/>
       </Route>
-      <Route path='/SignIn' element={<SignIn/>}/>
+      <Route path='/lumiled/SignIn' element={<SignIn/>}/>
       </Routes>
       <Footer/>
       </IsAdmin>

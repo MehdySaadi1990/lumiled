@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { keyframes } from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const FadeIn = keyframes`
 0%{opacity:0}
@@ -132,6 +133,7 @@ function TechPage(image) {
     const datas = JSON.parse(getProduct()) 
     const token = getToken()
     const fileName = datas.fiche_tech.split("/")[4]
+    const navigate = useNavigate()
     return(
         <PageArea>
             <ImageArea>
@@ -187,7 +189,10 @@ function TechPage(image) {
                                                 link.remove();
                                             })
                                             .catch(err=>console.log(err))}}>Télécharger Fiche Technique</Btn>
-                <Btn onClick={()=>{addItem(datas)}}>Ajouter au panier</Btn>
+                <Btn onClick={async()=>{
+                    await addItem(datas)
+                    navigate('/lumiled/Items')
+                }}>Ajouter au panier</Btn>
                 </BtnArea>
                                             </InfoArea>
             

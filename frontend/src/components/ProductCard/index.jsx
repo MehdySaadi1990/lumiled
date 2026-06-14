@@ -44,7 +44,7 @@ function saveBasket(data) {
 
 function ProductCard({type, serie, image, data, power, cct}) {
     return(
-        <ProductCardArea to="/TechPage" onClick={()=>
+        <ProductCardArea to="/lumiled/TechPage" onClick={()=>
             saveBasket(data)}>
             <ImgProduct src={image} alt=""/>
             <DescriptionArea>{type} {serie} {power} {cct}</DescriptionArea>

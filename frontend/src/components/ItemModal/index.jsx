@@ -214,7 +214,7 @@ function ItemModal({modal, setModal, ajout, setAjout, id}) {
                     setImage({})
                     setFicheTech({})
                     setModal(false)
-                    navigate('/Administration')
+                    navigate('/lumiled/Administration')
                 }}>Ajouter Article</ModalBtn>:<ModalBtn onClick={(e)=>{
                     e.preventDefault()  
                     fetch(`http://localhost:5000/api/product/update/${id}`,
