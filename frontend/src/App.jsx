@@ -30,7 +30,7 @@ function App() {
       <GlobalStyle/>
       <Header/>
       <Routes>
-      <Route path='/lumiled' element={<Home/>}/>
+      <Route path='/lumiled/' element={<Home/>}/>
       <Route path='/About' element={<About/>}/>
       <Route element={<PrivateRoutes/>}>
           <Route path='/Items' element={<Items/>}/>
