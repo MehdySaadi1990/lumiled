@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { keyframes } from "styled-components";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const FadeIn = keyframes`
@@ -158,7 +157,6 @@ function TechPage(image) {
     const datas = JSON.parse(getProduct()) 
     const token = getToken()
     const fileName = datas.fiche_tech.split("/")[4]
-    const navigate = useNavigate()
     return(
         <PageArea>
             <ImageArea>
