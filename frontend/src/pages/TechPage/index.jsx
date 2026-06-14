@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { keyframes } from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const FadeIn = keyframes`
 0%{opacity:0}
@@ -94,7 +95,31 @@ cursor:pointer;
 font-weight:bold;
 background-color:#f7d200;
 border-radius:10px;
-border: none
+border: none;
+transition:transform 500ms;
+&:hover{
+transform : scale(1.1)
+}
+`
+const ToCart = styled(Link)`
+width:100%;
+height:50px;
+text-decoration: none;
+cursor:pointer;
+font-weight:bold;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:#f7d200;
+border-radius:10px;
+border: none;
+background-color:rgb(245,0,2);
+color:rgb(255, 255, 255);
+font-size:14px;
+transition:transform 500ms;
+&:hover{
+transform : scale(1.1)
+}
 `
 
 function getProduct() {
@@ -189,10 +214,9 @@ function TechPage(image) {
                                                 link.remove();
                                             })
                                             .catch(err=>console.log(err))}}>Télécharger Fiche Technique</Btn>
-                <Btn onClick={async()=>{
-                    await addItem(datas)
-                    navigate('/lumiled/Items')
-                }}>Ajouter au panier</Btn>
+                <ToCart to="/lumiled/Items" onClick={()=>{
+                     addItem(datas)
+                }}>Ajouter au panier</ToCart>
                 </BtnArea>
                                             </InfoArea>
             

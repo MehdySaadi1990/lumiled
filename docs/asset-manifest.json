@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lumiled/static/css/main.414c6053.css",
-    "main.js": "/lumiled/static/js/main.749b23f4.js",
+    "main.js": "/lumiled/static/js/main.0ec50a4f.js",
     "static/media/lumiere.jpg": "/lumiled/static/media/lumiere.ed6479f4f4993c73c7ac.jpg",
     "static/media/ambiance.jpg": "/lumiled/static/media/ambiance.e6402d0fde12243dc49a.jpg",
     "static/media/boutique.jpg": "/lumiled/static/media/boutique.0a727cb8bc9d91b19a44.jpg",
@@ -15,10 +15,10 @@
     "static/media/mehdy.jpeg": "/lumiled/static/media/mehdy.05928d84f214a7e0f456.jpeg",
     "index.html": "/lumiled/index.html",
     "main.414c6053.css.map": "/lumiled/static/css/main.414c6053.css.map",
-    "main.749b23f4.js.map": "/lumiled/static/js/main.749b23f4.js.map"
+    "main.0ec50a4f.js.map": "/lumiled/static/js/main.0ec50a4f.js.map"
   },
   "entrypoints": [
     "static/css/main.414c6053.css",
-    "static/js/main.749b23f4.js"
+    "static/js/main.0ec50a4f.js"
   ]
 }
