@@ -98,7 +98,6 @@ function ItemModal({modal, setModal, ajout, setAjout, id}) {
     const [image, setImage] = useState({})
     const [ficheTech, setFicheTech] = useState({})
     const token = localStorage.getItem('token')
-    const product = JSON.parse(localStorage.getItem('product'))
 
     const formData = new FormData()
                         formData.append('brand',marque)
