@@ -35,7 +35,7 @@ function App() {
       <Route element={<PrivateRoutes/>}>
           <Route path='/lumiled/Items' element={<Items/>}/>
           <Route path='/lumiled/TechPage' element={<TechPage/>}/>
-          <Route path='/lumiled/cart' element={<Cart/>}/>
+          <Route path='/lumiled/Cart' element={<Cart/>}/>
       </Route>
       <Route element={<AdminRoutes/>}>
           <Route path='/lumiled/Administration' element={<Administration/>}/>
